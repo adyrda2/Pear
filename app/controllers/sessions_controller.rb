@@ -5,4 +5,9 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     redirect_to user, notice: "Signed in!"
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
 end
