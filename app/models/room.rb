@@ -1,3 +1,4 @@
 class Room < ActiveRecord::Base
-  has_many :users, through: :users_rooms
+  has_many :memberships
+  has_many :users, through: :memberships
 end

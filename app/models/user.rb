@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :rooms, through: :users_rooms
+  has_many :memberships
+  has_many :rooms, through: :memberships
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
