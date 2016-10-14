@@ -23,6 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-twitter'
 gem 'dotenv-rails'
 gem 'pry'
+gem 'rails_admin', '~> 1.0'
 
 group :production do
   gem 'pg'

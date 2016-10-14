@@ -10,7 +10,7 @@
   <header>
     <nav>
       <ul>
-      <% if current_user %>
+      <% if @user && current_user %>
         <li><h2><%= link_to 'Sign out', signout_path, method: :delete%> </h2></li>
       <% else %>
         <li><h2><%=link_to "Sign in with Twitter", "/auth/twitter"%></h2></li>

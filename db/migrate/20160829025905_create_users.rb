@@ -4,7 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :name
-      
+      t.boolean :admin, default: false
+
       t.timestamps null: false
     end
   end
