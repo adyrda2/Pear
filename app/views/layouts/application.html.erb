@@ -11,9 +11,9 @@
     <nav>
       <ul>
       <% if logged_in? && current_user %>
-        <li><h2><%= link_to 'Sign out', signout_path, method: :delete%> </h2></li>
+        <li><%= link_to 'Sign out', signout_path, method: :delete%></li>
       <% else %>
-        <li><h2><%=link_to "Sign in with Twitter", "/auth/twitter"%></h2></li>
+        <li><%=link_to "Sign in with Twitter", "/auth/twitter"%></li>
       <% end %>
     </nav>
   </header>
@@ -21,4 +21,5 @@
 <%= yield %>
 
 </body>
+<footer>&copy;Pear.io 2016</footer>
 </html>
