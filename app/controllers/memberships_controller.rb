@@ -24,7 +24,10 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.json
   def create
-    @membership = Membership.new(membership_params)
+    @user = User.find_by(session[:id])
+    @room = Room.find_by(params[:id])
+    binding.pry
+    @membership = Membership.new({user_id: @user.id, room_id: @room.id})
 
     respond_to do |format|
       if @membership.save

@@ -13,7 +13,7 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
-        <td><%= room.name %></td>
+        <td><%= link_to "#{room.name}", memberships_path, method: :post, data: { confirm: 'Are you sure you want to join this membership?' }  %></td>
         <% if logged_in? && current_user.admin? %>
           <td><%= link_to 'Show', room %></td>
           <td><%= link_to 'Edit', edit_room_path(room) %></td>
