@@ -1,8 +1,7 @@
 class MembershipsController < ApplicationController
   def create
     @user = User.find_by(session[:id])
-    @membership = Membership.new({user_id: @user.id, room_id: params["membership"]["room_id"]})
-    binding.pry
+    @membership = Membership.new({user_id: @user.id, room_id: params["membership"]["room"]})
 
     respond_to do |format|
       if @membership.save
