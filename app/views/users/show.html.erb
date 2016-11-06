@@ -1,6 +1,6 @@
 <h2>hello <%= @user.name %></h2>
 <p><%= link_to 'Join different groups here!', rooms_path%><p>
 <h3> Your Groups </h3>
-+<% @user.rooms.each do |room| %>
-+  <%= room.name %>
-+<% end %>
+<% @user.rooms.each do |room| %>
+  <%= room.name %>
+<% end %>
