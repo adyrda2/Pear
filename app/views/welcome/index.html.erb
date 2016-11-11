@@ -19,6 +19,10 @@
   </head>
   <body>
     <h1>Pear</h1>
+    <% if logged_in? && current_user %>
+      <li><%= link_to 'My Dashboard', user_path(current_user) %></li>
+    <% end %>
+
     <div class="background_layer">
       <img src="assets/scene.jpeg" class="main_img">
     </div>
