@@ -84,6 +84,16 @@ footer {
 }
 
 .twitter_avatar img {
-  width: 15%;
-  height: 15%;
+  width: 12%;
+  height: 12%;
+}
+
+.rooms {
+  width: 20%;
+  height: 200px;
+  border: 3px dotted #ddd;
+}
+
+.profile_side_bar {
+  border: 3px dotted green;
 }
